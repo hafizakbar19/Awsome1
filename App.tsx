@@ -41,6 +41,8 @@ const styles = StyleSheet.create({
     height: 100,
     margin: 5,
     borderRadius: 10,
+    color: 'black',
+    fontWeight: 'bold'
   },
   cardOne: {
     backgroundColor: 'red'
