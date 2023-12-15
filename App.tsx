@@ -1,59 +1,28 @@
-import { View, Text, SafeAreaView, StyleSheet } from 'react-native'
+import { View, Text, SafeAreaView, StyleSheet, ScrollView } from 'react-native'
 import React from 'react'
+import FlatCard from './components/FlatCard'
+import ElevatedCards from './components/ElevatedCards'
+import FancyCard from './components/FancyCard'
 
 const App = () => {
+
+  const images = {
+    image : require('./images/akbar.png'),
+    image1 : require('./images/kids1.jpg'),
+    image2 : require('./images/kids.jpg')
+  };
+
   return (
     <SafeAreaView>
-      <View>
-        <Text style={styles.heading}>Cards playground</Text>
-      <View style={styles.container}>
-        <View style={[styles.card, styles.cardOne]}>
-          <Text>Card1</Text>
-          </View>
-          <View style={[styles.card, styles.cardTwo]}>
-          <Text>Card2</Text>
-          </View>
-          <View style={[styles.card, styles.cardThree]}>
-          <Text>Card3</Text>
-          </View>
-      </View>
-      </View>
+      <ScrollView>
+      <FlatCard />
+      <ElevatedCards />
+      <FancyCard imager={images.image}/>
+      <FancyCard imager1={images.image1} />
+      <FancyCard imager2={images.image2}/>
+      </ScrollView>
     </SafeAreaView>
-    
   )
 }
-
-const styles = StyleSheet.create({
-  heading: {
-    fontSize: 25,
-    fontWeight: 'bold',
-    paddingHorizontal: 10
-  },
-  container: {
-    flex: 1,
-    flexDirection: 'row'
-  },
-  card: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: 100,
-    height: 100,
-    margin: 5,
-    borderRadius: 10,
-    color: 'black',
-    fontWeight: 'bold'
-  },
-  cardOne: {
-    backgroundColor: 'red'
-  },
-  cardTwo: {
-    backgroundColor: 'yellow'
-  },
-  cardThree: {
-    backgroundColor: 'green'
-  }
-
-})
 
 export default App
