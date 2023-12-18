@@ -1,7 +1,9 @@
 import { Image, StyleSheet, Text, View, Linking, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-export default function ActionCard(props) {
+export default function ActionCard() {
+
+    const image = require('../images/kids.jpg');
 
     function openWebsite(websiteLink: string){
         Linking.openURL(websiteLink)
@@ -11,8 +13,8 @@ export default function ActionCard(props) {
     <View>
       <Text style={styles.heading}>ActionCard</Text>
       <View>
-        <Image 
-        source={props.imager1}
+        <Image
+        source={image}
         style={styles.imageStyle}
         />
       </View>
@@ -23,7 +25,7 @@ export default function ActionCard(props) {
           voluptate molestiae veniam esse, debitis deleniti nam? Consequatur,
           dolorem hic, amet temporibus iusto molestias aspernatur ipsum vitae
           repellendus in iure beatae nihil fugiat accusantium id explicabo enim
-          neque modi ipsam blanditiis? Error, distinctio. 
+          neque modi ipsam blanditiis? Error, distinctio.
         </Text>
       </View>
       <View>
