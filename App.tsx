@@ -3,6 +3,7 @@ import React from 'react'
 import FlatCard from './components/FlatCard'
 import ElevatedCards from './components/ElevatedCards'
 import FancyCard from './components/FancyCard'
+import ActionCard from './components/ActionCard'
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
       <FancyCard imager={images.image}/>
       <FancyCard imager1={images.image1} />
       <FancyCard imager2={images.image2}/>
+      <ActionCard imager1={images.image1}/>
       </ScrollView>
     </SafeAreaView>
   )
